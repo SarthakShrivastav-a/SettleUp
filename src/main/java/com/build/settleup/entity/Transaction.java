@@ -5,22 +5,22 @@ import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.Date;
-import java.util.List;
 
-@Document(collection = "expenses")
-public class Expense {
+@Document(collection = "transactions")
+public class Transaction {
     @Id
     private String id;
 
     private double amount;
-    private String description;
 
     @Indexed
-    private String createdBy; // user idd
+    private String paidBy;
 
-    private List<String> participants; // list user ids
+    @Indexed
+    private String paidTo;
 
-    private String splitType; // EQUAL, PERCENTAGE, CUSTOM
+    private String status;
+
     private Date createdAt;
     private Date updatedAt;
 }

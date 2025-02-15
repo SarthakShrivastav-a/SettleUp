@@ -7,20 +7,20 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.util.Date;
 import java.util.List;
 
-@Document(collection = "expenses")
-public class Expense {
+@Document(collection = "groups")
+public class Group {
     @Id
     private String id;
 
-    private double amount;
-    private String description;
+    private String name;
 
     @Indexed
-    private String createdBy; // user idd
+    private String createdBy;
 
-    private List<String> participants; // list user ids
+    private List<String> members;
 
-    private String splitType; // EQUAL, PERCENTAGE, CUSTOM
+    private List<String> expenses;
+
     private Date createdAt;
     private Date updatedAt;
 }
