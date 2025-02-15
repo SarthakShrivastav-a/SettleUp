@@ -1,26 +1,22 @@
 package com.build.settleup.entity;
 
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
-
-import java.util.Date;
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
 
 @Document(collection = "transactions")
 public class Transaction {
+
     @Id
     private String id;
+    private String payerId;       // who paid
+    private String payeeId;       // who received the money
+    private BigDecimal amount;
+    private String expenseId;     // links to related expense
+    private String groupId;       // optional links to a group
+    private String notes;
+    private LocalDateTime timestamp = LocalDateTime.now();
 
-    private double amount;
-
-    @Indexed
-    private String paidBy;
-
-    @Indexed
-    private String paidTo;
-
-    private String status;
-
-    private Date createdAt;
-    private Date updatedAt;
+    // Constructors, Getters, Setters
 }
