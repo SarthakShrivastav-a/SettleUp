@@ -1,4 +1,4 @@
-package com.build.settleup.jwt;
+package com.build.settleup.entity;
 
 public class LoginRequest {
     private String email;

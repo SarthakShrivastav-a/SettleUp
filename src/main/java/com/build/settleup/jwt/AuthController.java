@@ -1,6 +1,6 @@
 package com.build.settleup.jwt;
 
-import com.build.settleup.jwt.LoginRequest;
+import com.build.settleup.entity.LoginRequest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
