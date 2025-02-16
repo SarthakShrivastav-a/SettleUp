@@ -1,5 +1,6 @@
 package com.build.settleup.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -16,8 +17,8 @@ public class Users {
     @Indexed(unique = true)
     private String email;
     private String name;
+    @JsonIgnore
     private String password;
     private Date createdAt;
-    private Date updatedAt;
     private String upiId;
 }
