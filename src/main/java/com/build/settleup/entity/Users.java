@@ -19,4 +19,5 @@ public class Users {
     private String password;
     private Date createdAt;
     private Date updatedAt;
+    private String upiId;
 }

@@ -1,11 +1,13 @@
 package com.build.settleup.entity;
 
+import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Document(collection = "transactions")
+@Data
 public class Transaction {
 
     @Id
