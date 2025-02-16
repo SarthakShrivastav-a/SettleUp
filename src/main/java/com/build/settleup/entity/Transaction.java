@@ -20,5 +20,5 @@ public class Transaction {
     private String notes;
     private LocalDateTime timestamp = LocalDateTime.now();
 
-    // Constructors, Getters, Setters
+
 }

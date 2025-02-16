@@ -22,7 +22,7 @@ public class Expense {
 
     private List<String> participants; // list user ids
 
-    private String splitType; // EQUAL, PERCENTAGE, CUSTOM
+    private String splitType;
     private Date createdAt;
     private Date updatedAt;
 }
